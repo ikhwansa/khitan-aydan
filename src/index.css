@@ -1,23 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Quicksand:wght@400;500;600;700&display=swap');
 
 :root {
-  /* Design system tokens - Tema Full Betawi */
-  --primary-light: #FDFCF7;                 /* Warm ivory background */
-  --primary-pastel: #F5EFE4;                /* Softer warm cream */
-  --primary-medium: #C5A880;                /* Muted gold/tan */
-  --primary-brand: #2E7D32;                 /* Betawi Green */
-  --primary-brand-hover: #1B5E20;           /* Darker Green for hover */
-  --primary-dark: #2d3436;                  /* Solid dark gray/black */
-  --accent-gold: #E5A93B;                   /* Vibrant Gold */
-  --accent-orange: #F57C00;                 /* Betawi Orange */
-  --accent-red: #D32F2F;                    /* Ondel-Ondel Red */
-  --bg-light: #FAF6EE;                      /* Warm background color */
+  /* Design system tokens - Tema Spider-Man */
+  --primary-light: #F4F7FB;                 /* Cool light-blue gray background */
+  --primary-pastel: #E2E8F0;                /* Muted blue gray */
+  --primary-medium: #0B4F9C;                /* Spidey Blue */
+  --primary-brand: #E23636;                 /* Spidey Red */
+  --primary-brand-hover: #B81D1D;           /* Darker Red */
+  --primary-dark: #17171A;                  /* Web Black / Dark Slate */
+  --accent-gold: #FFD32A;                   /* Spidey Yellow/Gold */
+  --accent-blue: #0B4F9C;                   /* Spidey Blue */
+  --accent-red: #E23636;                    /* Spidey Red */
+  --bg-light: #F0F4F8;                      /* Cool slate light background */
   --card-bg: #ffffff;                       /* Solid white for cards */
   
   --font-heading: 'Outfit', sans-serif;
   --font-body: 'Quicksand', sans-serif;
   
-  --shadow-soft: 6px 6px 0px #2d3436;
+  --shadow-soft: 6px 6px 0px var(--primary-dark);
   --shadow-inset: inset 2px 2px 4px rgba(0,0,0,0.06);
   --border-radius-lg: 28px;
   --border-radius-md: 24px;
@@ -34,7 +34,7 @@
 
 body {
   font-family: var(--font-body);
-  background-color: #FAF5E9;
+  background-color: #F0F4F8;
   color: var(--primary-dark);
   overflow-x: hidden;
   line-height: 1.6;
@@ -131,6 +131,17 @@ h1, h2, h3, h4 {
 @keyframes slideUp {
   from { transform: translateY(0); opacity: 1; }
   to { transform: translateY(-100%); opacity: 0; pointer-events: none; }
+}
+
+@keyframes spider-swing {
+  0% { transform: rotate(-6deg); }
+  50% { transform: rotate(6deg); }
+  100% { transform: rotate(-6deg); }
+}
+
+.spider-swing-animation {
+  animation: spider-swing 4s ease-in-out infinite;
+  transform-origin: top center;
 }
 
 @keyframes fadeIn {

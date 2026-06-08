@@ -205,9 +205,9 @@ export default function MainContent({ isOpened }) {
           untuk menghadiri acara khitanan putra kami:
         </p>
 
-        {/* Child Photo Frame with Cultural accents */}
+        {/* Child Photo Frame with Spider-Man theme accents */}
         <div className="child-portrait-wrapper">
-          {/* Gigi Balang Corner Accent behind the frame */}
+          {/* Corner Spiderweb Accent behind the frame */}
           <div style={{
             position: 'absolute',
             top: '-20px',
@@ -216,12 +216,15 @@ export default function MainContent({ isOpened }) {
             opacity: 0.95
           }}>
             <svg viewBox="0 0 100 100" width="75" height="75">
-              {/* Top Gigi Balang */}
-              <rect x="0" y="0" width="80" height="15" fill="#2E7D32" stroke="#2d3436" strokeWidth="2.5" />
-              <path d="M 0 15 L 12 30 L 24 15 L 36 30 L 48 15 L 60 30 L 72 15 L 80 25" fill="#E5A93B" stroke="#2d3436" strokeWidth="2.5" strokeLinejoin="round" />
-              {/* Left Gigi Balang */}
-              <rect x="0" y="0" width="15" height="80" fill="#2E7D32" stroke="#2d3436" strokeWidth="2.5" />
-              <path d="M 15 0 L 30 12 L 15 24 L 30 36 L 15 48 L 30 60 L 15 72 L 25 80" fill="#E5A93B" stroke="#2d3436" strokeWidth="2.5" strokeLinejoin="round" />
+              {/* Top and Left web frame lines */}
+              <path d="M 0 0 L 80 0 M 0 0 L 0 80 M 0 0 L 60 60" stroke="var(--primary-dark)" strokeWidth="3" />
+              {/* Web curves */}
+              <path d="M 25 0 Q 25 25 0 25" fill="none" stroke="var(--primary-dark)" strokeWidth="2" />
+              <path d="M 45 0 Q 45 45 0 45" fill="none" stroke="var(--primary-dark)" strokeWidth="2" />
+              <path d="M 65 0 Q 65 65 0 65" fill="none" stroke="var(--primary-dark)" strokeWidth="2" />
+              {/* Red web lines */}
+              <path d="M 35 0 Q 35 35 0 35" fill="none" stroke="var(--primary-brand)" strokeWidth="1.5" opacity="0.8" />
+              <path d="M 55 0 Q 55 55 0 55" fill="none" stroke="var(--primary-brand)" strokeWidth="1.5" opacity="0.8" />
             </svg>
           </div>
 
@@ -230,35 +233,35 @@ export default function MainContent({ isOpened }) {
             <img src={aydanPhoto} alt="Aydan Syahmi Siregar" className="child-portrait-img" />
           </div>
 
-          {/* Sepasang Ondel-Ondel Mask Sticker overlay on the corner of the frame */}
+          {/* Spider Sticker overlay on the corner of the frame */}
           <div style={{
             position: 'absolute',
             bottom: '-12px',
             right: '-16px',
             zIndex: 10,
             transform: 'rotate(5deg)',
-            filter: 'drop-shadow(3px 3px 0px #2d3436)'
+            filter: 'drop-shadow(3px 3px 0px var(--primary-dark))'
           }}>
-            <svg viewBox="0 0 120 100" width="75" height="62">
-              {/* Left: Male Ondel-Ondel */}
-              <g transform="translate(5, 5) scale(0.9)">
-                <path d="M 25 35 L 20 12 L 32 18 L 30 3 L 42 16 L 50 0 L 58 16 L 70 3 L 68 18 L 80 12 L 75 35 Z" fill="#E5A93B" stroke="#2d3436" strokeWidth="2.5" strokeLinejoin="round" />
-                <path d="M 25 45 C 25 25 75 25 75 45 L 75 85 Z" fill="#1A1A1A" stroke="#2d3436" strokeWidth="3" />
-                <path d="M 32 50 C 32 40 68 40 68 50 L 65 80 C 65 85 35 85 35 80 Z" fill="#D32F2F" stroke="#2d3436" strokeWidth="3" />
-                <ellipse cx="42" cy="58" rx="3" ry="2" fill="#ffffff" stroke="#2d3436" strokeWidth="2" />
-                <ellipse cx="58" cy="58" rx="3" ry="2" fill="#ffffff" stroke="#2d3436" strokeWidth="2" />
-                <path d="M 40 68 Q 50 64 60 68" fill="none" stroke="#1A1A1A" strokeWidth="2.5" strokeLinecap="round" />
-              </g>
-              {/* Right: Female Ondel-Ondel */}
-              <g transform="translate(45, 12) scale(0.8)">
-                <path d="M 25 35 L 20 12 L 32 18 L 30 3 L 42 16 L 50 0 L 58 16 L 70 3 L 68 18 L 80 12 L 75 35 Z" fill="#E5A93B" stroke="#2d3436" strokeWidth="2.5" strokeLinejoin="round" />
-                <path d="M 25 45 C 25 25 75 25 75 45 L 75 85 Z" fill="#1A1A1A" stroke="#2d3436" strokeWidth="3" />
-                <path d="M 32 50 C 32 40 68 40 68 50 L 65 80 C 65 85 35 85 35 80 Z" fill="#FAFBF7" stroke="#2d3436" strokeWidth="3" />
-                <ellipse cx="42" cy="58" rx="3" ry="2" fill="#ffffff" stroke="#2d3436" strokeWidth="2" />
-                <ellipse cx="58" cy="58" rx="3" ry="2" fill="#ffffff" stroke="#2d3436" strokeWidth="2" />
-                <circle cx="38" cy="66" r="3.5" fill="#ff7675" opacity="0.65" />
-                <circle cx="62" cy="66" r="3.5" fill="#ff7675" opacity="0.65" />
-                <path d="M 46 72 Q 50 77 54 72 Z" fill="#D32F2F" stroke="#2d3436" strokeWidth="1.5" />
+            <svg viewBox="0 0 100 100" width="70" height="70">
+              {/* Round badge backer */}
+              <circle cx="50" cy="50" r="42" fill="var(--primary-brand)" stroke="var(--primary-dark)" strokeWidth="3" />
+              <circle cx="50" cy="50" r="37" fill="none" stroke="white" strokeWidth="1.5" strokeDasharray="3,3" />
+              
+              {/* Spider graphic in the center */}
+              <g transform="translate(10, 10) scale(0.8)">
+                {/* Spider Body */}
+                <ellipse cx="50" cy="53" rx="10" ry="14" fill="var(--primary-dark)" stroke="white" strokeWidth="1" />
+                <circle cx="50" cy="37" r="7" fill="var(--primary-dark)" />
+                {/* Legs */}
+                <path d="M 43 45 Q 30 35 22 47" fill="none" stroke="var(--primary-dark)" strokeWidth="2.5" strokeLinecap="round" />
+                <path d="M 41 52 Q 25 48 18 60" fill="none" stroke="var(--primary-dark)" strokeWidth="2.5" strokeLinecap="round" />
+                <path d="M 41 58 Q 26 60 20 72" fill="none" stroke="var(--primary-dark)" strokeWidth="2.5" strokeLinecap="round" />
+                <path d="M 43 64 Q 32 75 28 84" fill="none" stroke="var(--primary-dark)" strokeWidth="2.5" strokeLinecap="round" />
+                
+                <path d="M 57 45 Q 70 35 78 47" fill="none" stroke="var(--primary-dark)" strokeWidth="2.5" strokeLinecap="round" />
+                <path d="M 59 52 Q 75 48 82 60" fill="none" stroke="var(--primary-dark)" strokeWidth="2.5" strokeLinecap="round" />
+                <path d="M 59 58 Q 74 60 80 72" fill="none" stroke="var(--primary-dark)" strokeWidth="2.5" strokeLinecap="round" />
+                <path d="M 57 64 Q 68 75 72 84" fill="none" stroke="var(--primary-dark)" strokeWidth="2.5" strokeLinecap="round" />
               </g>
             </svg>
           </div>
