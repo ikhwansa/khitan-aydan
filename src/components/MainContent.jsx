@@ -228,7 +228,26 @@ export default function MainContent({ isOpened }) {
             </svg>
           </div>
 
-          <div className="child-portrait-ring"></div>
+          <div className="child-portrait-ring">
+            <svg viewBox="0 0 100 100" width="100%" height="100%">
+              {/* Radiating Web Spokes */}
+              <line x1="50" y1="50" x2="50" y2="0" stroke="var(--primary-dark)" strokeWidth="2.5" />
+              <line x1="50" y1="50" x2="50" y2="100" stroke="var(--primary-dark)" strokeWidth="2.5" />
+              <line x1="50" y1="50" x2="0" y2="50" stroke="var(--primary-dark)" strokeWidth="2.5" />
+              <line x1="50" y1="50" x2="100" y2="50" stroke="var(--primary-dark)" strokeWidth="2.5" />
+              <line x1="50" y1="50" x2="15" y2="15" stroke="var(--primary-dark)" strokeWidth="2" />
+              <line x1="50" y1="50" x2="85" y2="85" stroke="var(--primary-dark)" strokeWidth="2" />
+              <line x1="50" y1="50" x2="85" y2="15" stroke="var(--primary-dark)" strokeWidth="2" />
+              <line x1="50" y1="50" x2="15" y2="85" stroke="var(--primary-dark)" strokeWidth="2" />
+              
+              {/* Concentric Web Rings */}
+              <circle cx="50" cy="50" r="18" fill="none" stroke="var(--primary-dark)" strokeWidth="1.5" />
+              <circle cx="50" cy="50" r="32" fill="none" stroke="var(--primary-dark)" strokeWidth="1.5" />
+              <circle cx="50" cy="50" r="44" fill="none" stroke="var(--primary-dark)" strokeWidth="2" />
+              {/* Dashed outer web ring */}
+              <circle cx="50" cy="50" r="48" fill="none" stroke="var(--primary-brand)" strokeWidth="1.5" strokeDasharray="3,3" />
+            </svg>
+          </div>
           <div className="child-portrait-frame">
             <img src={aydanPhoto} alt="Aydan Syahmi Siregar" className="child-portrait-img" />
           </div>

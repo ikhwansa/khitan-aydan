@@ -523,9 +523,8 @@ h1, h2, h3, h4 {
   left: -12px;
   width: 224px;
   height: 224px;
-  border: 4px dashed #2d3436;
-  border-radius: 50%;
-  animation: star-spin 25s linear infinite;
+  animation: star-spin 35s linear infinite;
+  pointer-events: none;
 }
 
 .child-portrait-frame {

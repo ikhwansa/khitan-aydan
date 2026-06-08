@@ -82,42 +82,6 @@ export default function CoverPage({ isOpened, onOpen }) {
       </div>
 
       <div className="cover-content float-animation">
-        {/* Spider-Man Mask Emblem Badge */}
-        <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '16px' }}>
-          <div style={{ position: 'relative', width: '95px', height: '95px' }}>
-            <svg viewBox="0 0 100 100" width="95" height="95" style={{ filter: 'drop-shadow(3px 3px 0px var(--primary-dark))' }}>
-              {/* Outer Circular frame */}
-              <circle cx="50" cy="50" r="45" fill="var(--accent-blue)" stroke="var(--primary-dark)" strokeWidth="3.5" />
-              <circle cx="50" cy="50" r="40" fill="none" stroke="white" strokeWidth="1.5" strokeDasharray="3,3" />
-
-              {/* Spider-Man Head */}
-              <g transform="translate(15, 12)">
-                {/* Red Head shape */}
-                <path d="M 12 35 C 12 12 58 12 58 35 C 58 52 46 68 35 68 C 24 68 12 52 12 35 Z" fill="var(--primary-brand)" stroke="var(--primary-dark)" strokeWidth="3" />
-                
-                {/* Web lines on face */}
-                {/* Vertical lines */}
-                <path d="M 35 17 L 35 68" stroke="var(--primary-dark)" strokeWidth="1.5" />
-                <path d="M 35 17 Q 20 30 13 46" fill="none" stroke="var(--primary-dark)" strokeWidth="1.2" />
-                <path d="M 35 17 Q 50 30 57 46" fill="none" stroke="var(--primary-dark)" strokeWidth="1.2" />
-                <path d="M 35 68 Q 20 50 13 35" fill="none" stroke="var(--primary-dark)" strokeWidth="1.2" />
-                <path d="M 35 68 Q 50 50 57 35" fill="none" stroke="var(--primary-dark)" strokeWidth="1.2" />
-                
-                {/* Concentric webs */}
-                <path d="M 23 28 Q 35 34 47 28" fill="none" stroke="var(--primary-dark)" strokeWidth="1.2" />
-                <path d="M 18 38 Q 35 46 52 38" fill="none" stroke="var(--primary-dark)" strokeWidth="1.2" />
-                <path d="M 15 48 Q 35 58 55 48" fill="none" stroke="var(--primary-dark)" strokeWidth="1.2" />
-
-                {/* Left Eye */}
-                <path d="M 17 32 C 17 26 27 26 31 36 C 25 40 19 38 17 32 Z" fill="white" stroke="var(--primary-dark)" strokeWidth="3" strokeLinejoin="round" />
-                
-                {/* Right Eye */}
-                <path d="M 53 32 C 53 26 43 26 39 36 C 45 40 51 38 53 32 Z" fill="white" stroke="var(--primary-dark)" strokeWidth="3" strokeLinejoin="round" />
-              </g>
-            </svg>
-          </div>
-        </div>
-
         <div style={{ display: 'flex', justifyContent: 'center', gap: '8px', alignItems: 'center', marginBottom: '8px' }}>
           <span style={{ fontSize: '0.85rem', fontWeight: 800, color: 'var(--accent-gold)', background: 'var(--primary-dark)', padding: '2px 12px', borderRadius: '4px', letterSpacing: '1.5px', border: '2px dashed var(--primary-brand)' }}>WALIMATUL KHITAN</span>
         </div>
@@ -126,7 +90,7 @@ export default function CoverPage({ isOpened, onOpen }) {
         </h1>
 
         {/* Aydan's Photo Portrait on Cover */}
-        <div style={{ display: 'flex', justifyContent: 'center', margin: '16px 0 24px 0' }}>
+        <div style={{ display: 'flex', justifyContent: 'center', margin: '16px 0 16px 0' }}>
           <div style={{
             position: 'relative',
             width: '130px',
@@ -139,6 +103,22 @@ export default function CoverPage({ isOpened, onOpen }) {
           }}>
             <img src={aydanPhoto} alt="Aydan Syahmi Siregar" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
           </div>
+        </div>
+
+        {/* Date info on Cover */}
+        <div style={{ 
+          fontSize: '0.95rem', 
+          fontWeight: 800, 
+          color: 'var(--primary-dark)', 
+          background: 'var(--primary-pastel)',
+          border: '2.5px solid var(--primary-dark)',
+          padding: '4px 16px',
+          borderRadius: '20px',
+          display: 'inline-block',
+          marginBottom: '20px',
+          boxShadow: '2px 2px 0px var(--primary-dark)'
+        }}>
+          Sabtu, 27 Juni 2026
         </div>
 
         <div className="cover-recipient-wrapper">
