@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Calendar, Clock, MapPin, Music, Send, Star, Copy, Check, CreditCard } from 'lucide-react';
+import { Calendar, Clock, MapPin, Music, Send, Star, Copy, Check } from 'lucide-react';
 import aydanPhoto from '../assets/aydan_photo.jpeg';
 import { db, isFirebaseEnabled } from '../firebase';
 import { collection, addDoc, query, orderBy, onSnapshot } from 'firebase/firestore';
@@ -185,13 +185,7 @@ export default function MainContent({ isOpened }) {
     setTimeout(() => setCopied(false), 2000);
   };
 
-  // --- Copy Bank Account State ---
-  const [copiedBank, setCopiedBank] = useState(false);
-  const copyBankAccount = () => {
-    navigator.clipboard.writeText('6240961456');
-    setCopiedBank(true);
-    setTimeout(() => setCopiedBank(false), 2000);
-  };
+
 
   return (
     <div className="content-wrapper">
@@ -499,38 +493,7 @@ export default function MainContent({ isOpened }) {
         </div>
       </section>
 
-      {/* 5. KADO DIGITAL / DIGITAL GIFT */}
-      <section className="section scroll-animate">
-        <h2 className="section-title">Kado Digital</h2>
-        <div className="glass-card">
-          <p style={{ fontSize: '0.9rem', opacity: 0.8, textAlign: 'center', marginBottom: '20px' }}>
-            Bagi Bapak/Ibu/Saudara/i yang ingin mengirimkan kado atau tanda kasih secara cashless, dapat dikirimkan melalui rekening di bawah ini:
-          </p>
 
-          <div className="bank-card">
-            <div className="bank-card-header">
-              <span className="bank-brand">BCA</span>
-              <CreditCard size={28} />
-            </div>
-            <div className="bank-card-number">
-              6240 9614 56
-            </div>
-            <div className="bank-card-footer">
-              <div className="bank-card-holder">
-                <span className="holder-label">Atas Nama</span>
-                <span className="holder-name">FREDDY RURY ARRIEANDY</span>
-              </div>
-              <button 
-                onClick={copyBankAccount}
-                className="btn-copy-bank"
-              >
-                {copiedBank ? <Check size={16} /> : <Copy size={16} />}
-                <span>{copiedBank ? 'Tersalin' : 'Salin Rekening'}</span>
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* 6. CLOSING & FOOTER */}
       <footer className="section scroll-animate" style={{ paddingBottom: '60px' }}>
