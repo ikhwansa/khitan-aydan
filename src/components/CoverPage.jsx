@@ -101,8 +101,7 @@ export default function CoverPage({ isOpened, onOpen }) {
         </div>
         <div className="cover-welcome" style={{ marginTop: '8px' }}>Walimatul Khitan</div>
         <h1 className="cover-title">
-          Aydan Syahmi
-          <span>Undangan Digital Khitanan</span>
+          Aydan Syahmi Siregar
         </h1>
 
         <div className="cover-recipient-wrapper">

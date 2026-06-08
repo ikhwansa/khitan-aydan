@@ -96,7 +96,7 @@ export default function MainContent({ isOpened }) {
           {
             id: 1,
             name: 'Om Tio & Tante Desi',
-            text: 'Selamat dikhitan Aydan Syahmi! Semoga menjadi anak yang sholeh, berbakti kepada kedua orang tua, berakhlak mulia, berguna bagi nusa, bangsa dan agama. Amin ya rabbal alamin.',
+            text: 'Selamat dikhitan Aydan Syahmi Siregar! Semoga menjadi anak yang sholeh, berbakti kepada kedua orang tua, berakhlak mulia, berguna bagi nusa, bangsa dan agama. Amin ya rabbal alamin.',
             attendance: 'hadir',
             time: '7 Juni 2026, 10:24'
           },
