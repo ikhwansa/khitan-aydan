@@ -5,7 +5,6 @@ build
 .gitignore
 README.md
 Dockerfile
-nginx.conf
 .dockerignore
 .eslint.config.js
 package-lock.json
