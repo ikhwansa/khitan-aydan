@@ -7,4 +7,3 @@ README.md
 Dockerfile
 .dockerignore
 .eslint.config.js
-package-lock.json
