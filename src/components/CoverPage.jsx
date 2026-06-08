@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { MailOpen, Star } from 'lucide-react';
 
+
 export default function CoverPage({ isOpened, onOpen }) {
   const [guestName, setGuestName] = useState('Bapak/Ibu/Saudara/i');
 
@@ -15,93 +16,100 @@ export default function CoverPage({ isOpened, onOpen }) {
 
   return (
     <div className={`cover-overlay ${isOpened ? 'slide-up' : ''}`}>
-      {/* Cartoon Background Elements on Cover Page */}
+      {/* Cultural Background Elements on Cover Page */}
       <div className="cover-bg-illustration" style={{ width: '100%', height: '100%', position: 'absolute', top: 0, left: 0, pointerEvents: 'none' }}>
-        {/* Top Left Spider Web */}
-        <div style={{ position: 'absolute', top: 0, left: 0, opacity: 0.9 }}>
-          <svg viewBox="0 0 100 100" width="130" height="130">
-            <path d="M 0 0 L 100 0" stroke="#2d3436" strokeWidth="4" />
-            <path d="M 0 0 L 0 100" stroke="#2d3436" strokeWidth="4" />
-            <path d="M 0 0 L 90 90" stroke="#2d3436" strokeWidth="3" />
-            <path d="M 0 0 L 40 90" stroke="#2d3436" strokeWidth="2" />
-            <path d="M 0 0 L 90 40" stroke="#2d3436" strokeWidth="2" />
-            <path d="M 30 0 Q 30 30 0 30" fill="none" stroke="#2d3436" strokeWidth="2" />
-            <path d="M 60 0 Q 60 60 0 60" fill="none" stroke="#2d3436" strokeWidth="2" />
-            <path d="M 90 0 Q 90 90 0 90" fill="none" stroke="#2d3436" strokeWidth="2" />
+        {/* Top Left Betawi Gigi Balang Corner Frame */}
+        <div style={{ position: 'absolute', top: 0, left: 0, opacity: 0.95 }}>
+          <svg viewBox="0 0 120 120" width="130" height="130">
+            {/* Top Gigi Balang */}
+            <rect x="0" y="0" width="120" height="15" fill="#2E7D32" stroke="#2d3436" strokeWidth="3" />
+            <path d="M 0 15 L 15 35 L 30 15 L 45 35 L 60 15 L 75 35 L 90 15 L 105 35 L 120 15" fill="#E5A93B" stroke="#2d3436" strokeWidth="3" strokeLinejoin="round" />
+            {/* Left Gigi Balang */}
+            <rect x="0" y="0" width="15" height="120" fill="#2E7D32" stroke="#2d3436" strokeWidth="3" />
+            <path d="M 15 0 L 35 15 L 15 30 L 35 45 L 15 60 L 35 75 L 15 90 L 35 105 L 15 120" fill="#E5A93B" stroke="#2d3436" strokeWidth="3" strokeLinejoin="round" />
           </svg>
         </div>
 
-        {/* Top Right Cloud */}
-        <div style={{ position: 'absolute', top: '10%', right: '5%' }}>
-          <svg viewBox="0 0 100 60" width="120" height="72">
-            <path d="M 20 40 A 12 12 0 0 1 36 28 A 16 16 0 0 1 68 28 A 12 12 0 0 1 84 40 L 84 42 A 8 8 0 0 1 76 50 L 24 50 A 8 8 0 0 1 16 42 Z" fill="#ffffff" stroke="#2d3436" strokeWidth="4" strokeLinejoin="round" />
+        {/* Top Right Betawi Gigi Balang */}
+        <div style={{ position: 'absolute', top: '2%', right: '2%' }}>
+          <svg viewBox="0 0 140 70" width="120" height="60">
+            <path d="M 0 0 L 140 0 L 140 30 Q 70 50 0 30 Z" fill="#2E7D32" stroke="#2d3436" strokeWidth="3" />
+            <path d="M 10 30 L 25 55 L 40 30 L 55 55 L 70 30 L 85 55 L 100 30 L 115 55 L 130 30" fill="none" stroke="#2d3436" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round" />
+            <path d="M 10 30 L 25 55 L 40 30 L 55 55 L 70 30 L 85 55 L 100 30 L 115 55 L 130 30" fill="#E5A93B" stroke="none" />
+            <circle cx="25" cy="40" r="3" fill="#FFFFFF" stroke="#2d3436" strokeWidth="1" />
+            <circle cx="55" cy="40" r="3" fill="#FFFFFF" stroke="#2d3436" strokeWidth="1" />
+            <circle cx="85" cy="40" r="3" fill="#FFFFFF" stroke="#2d3436" strokeWidth="1" />
+            <circle cx="115" cy="40" r="3" fill="#FFFFFF" stroke="#2d3436" strokeWidth="1" />
           </svg>
         </div>
 
-        {/* Hanging Spider on Left */}
+        {/* Hanging Kembang Kelapa on Left */}
         <div style={{ position: 'absolute', top: 0, left: '15%', opacity: 0.9 }} className="float-animation">
-          <svg viewBox="0 0 100 150" width="50" height="75">
-            <line x1="50" y1="0" x2="50" y2="85" stroke="#2d3436" strokeWidth="3.5" />
-            <circle cx="50" cy="95" r="14" fill="#2d3436" />
-            <circle cx="50" cy="113" r="8" fill="#2d3436" />
-            <circle cx="47" cy="113" r="1.5" fill="#ffffff" />
-            <circle cx="53" cy="113" r="1.5" fill="#ffffff" />
-            <path d="M 36 90 Q 26 80 24 90 M 36 95 Q 22 90 20 100 M 36 100 Q 24 105 26 115 M 64 90 Q 74 80 76 90 M 64 95 Q 78 90 80 100 M 64 100 Q 76 105 74 115" fill="none" stroke="#2d3436" strokeWidth="3" strokeLinejoin="round" />
+          <svg viewBox="0 0 80 150" width="40" height="75">
+            <line x1="40" y1="0" x2="40" y2="90" stroke="#2d3436" strokeWidth="3" />
+            <path d="M 40 90 L 10 70 L 40 100 L 70 70 Z" fill="#E5A93B" stroke="#2d3436" strokeWidth="2.5" strokeLinejoin="round" />
+            <circle cx="40" cy="115" r="14" fill="#2E7D32" stroke="#2d3436" strokeWidth="2.5" />
+            <circle cx="40" cy="115" r="7" fill="#D32F2F" stroke="#2d3436" strokeWidth="1.5" />
           </svg>
         </div>
 
         {/* Background stars */}
-        <Star size={24} style={{ position: 'absolute', top: '35%', left: '8%', color: '#ffeaa7', fill: '#ffeaa7', stroke: '#2d3436', strokeWidth: '2px' }} />
-        <Star size={20} style={{ position: 'absolute', bottom: '25%', right: '10%', color: '#ffd32a', fill: '#ffd32a', stroke: '#2d3436', strokeWidth: '2px' }} />
+        <Star size={24} style={{ position: 'absolute', top: '35%', left: '8%', color: '#FAF2E3', fill: '#E5A93B', stroke: '#2d3436', strokeWidth: '2px' }} />
+        <Star size={20} style={{ position: 'absolute', bottom: '25%', right: '10%', color: '#FAF2E3', fill: '#E5A93B', stroke: '#2d3436', strokeWidth: '2px' }} />
       </div>
 
       <div className="cover-content float-animation">
-        {/* Spiderman emblem badge at top of card */}
+        {/* Sepasang Ondel-Ondel Betawi Emblem Badge */}
         <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '16px' }}>
-          <div style={{ position: 'relative', width: '80px', height: '80px' }}>
-            {/* Spiderweb behind mask */}
-            <svg viewBox="0 0 100 100" width="80" height="80">
-              <circle cx="50" cy="50" r="45" fill="#eef2f7" stroke="#2d3436" strokeWidth="4" />
-              <line x1="50" y1="5" x2="50" y2="95" stroke="#2d3436" strokeWidth="3" />
-              <line x1="5" y1="50" x2="95" y2="50" stroke="#2d3436" strokeWidth="3" />
-              <line x1="18" y1="18" x2="82" y2="82" stroke="#2d3436" strokeWidth="3" />
-              <line x1="82" y1="18" x2="18" y2="82" stroke="#2d3436" strokeWidth="3" />
-              <path d="M 50 20 Q 50 50 20 50 M 50 20 Q 50 50 80 50 M 50 80 Q 50 50 20 50 M 50 80 Q 50 50 80 50" fill="none" stroke="#2d3436" strokeWidth="2.5" />
-              <path d="M 50 35 Q 50 50 35 50 M 50 35 Q 50 50 65 50 M 50 65 Q 50 50 35 50 M 50 65 Q 50 50 65 50" fill="none" stroke="#2d3436" strokeWidth="2.5" />
+          <div style={{ position: 'relative', width: '90px', height: '90px' }}>
+            <svg viewBox="0 0 100 100" width="90" height="90" style={{ filter: 'drop-shadow(3px 3px 0px #2d3436)' }}>
+              {/* Gold Circular border */}
+              <circle cx="50" cy="50" r="45" fill="#FAF2E3" stroke="#2d3436" strokeWidth="3.5" />
+              <circle cx="50" cy="50" r="40" fill="none" stroke="#2d3436" strokeWidth="1.5" strokeDasharray="3,3" />
+
+              {/* Left: Male Ondel-Ondel */}
+              <g transform="translate(-10, 5) scale(0.9)">
+                <path d="M 25 35 L 20 12 L 32 18 L 30 3 L 42 16 L 50 0 L 58 16 L 70 3 L 68 18 L 80 12 L 75 35 Z" fill="#E5A93B" stroke="#2d3436" strokeWidth="2" strokeLinejoin="round" />
+                <path d="M 25 45 C 25 25 75 25 75 45 L 75 85 Z" fill="#1A1A1A" stroke="#2d3436" strokeWidth="2.5" />
+                <path d="M 32 50 C 32 40 68 40 68 50 L 65 80 C 65 85 35 85 35 80 Z" fill="#D32F2F" stroke="#2d3436" strokeWidth="2.5" />
+                <ellipse cx="42" cy="58" rx="3" ry="2" fill="#ffffff" stroke="#2d3436" strokeWidth="1.5" />
+                <circle cx="42" cy="58" r="1" fill="#1A1A1A" />
+                <ellipse cx="58" cy="58" rx="3" ry="2" fill="#ffffff" stroke="#2d3436" strokeWidth="1.5" />
+                <circle cx="58" cy="58" r="1" fill="#1A1A1A" />
+                <path d="M 40 68 Q 50 64 60 68" fill="none" stroke="#1A1A1A" strokeWidth="2.5" strokeLinecap="round" />
+              </g>
+
+              {/* Right: Female Ondel-Ondel */}
+              <g transform="translate(18, 12) scale(0.8)">
+                <path d="M 25 35 L 20 12 L 32 18 L 30 3 L 42 16 L 50 0 L 58 16 L 70 3 L 68 18 L 80 12 L 75 35 Z" fill="#E5A93B" stroke="#2d3436" strokeWidth="2" strokeLinejoin="round" />
+                <path d="M 25 45 C 25 25 75 25 75 45 L 75 85 Z" fill="#1A1A1A" stroke="#2d3436" strokeWidth="2.5" />
+                <path d="M 32 50 C 32 40 68 40 68 50 L 65 80 C 65 85 35 85 35 80 Z" fill="#FAFBF7" stroke="#2d3436" strokeWidth="2.5" />
+                <ellipse cx="42" cy="58" rx="3" ry="2" fill="#ffffff" stroke="#2d3436" strokeWidth="1.5" />
+                <circle cx="42" cy="58" r="1" fill="#1A1A1A" />
+                <ellipse cx="58" cy="58" rx="3" ry="2" fill="#ffffff" stroke="#2d3436" strokeWidth="1.5" />
+                <circle cx="58" cy="58" r="1" fill="#1A1A1A" />
+                <circle cx="38" cy="66" r="3.5" fill="#ff7675" opacity="0.65" />
+                <circle cx="62" cy="66" r="3.5" fill="#ff7675" opacity="0.65" />
+                <path d="M 46 72 Q 50 77 54 72 Z" fill="#D32F2F" stroke="#2d3436" strokeWidth="1.5" />
+              </g>
             </svg>
-            {/* Spiderman Mask */}
-            <div style={{
-              position: 'absolute',
-              top: '12px',
-              left: '15px',
-              transform: 'rotate(-5deg)',
-              filter: 'drop-shadow(3px 3px 0px #2d3436)'
-            }}>
-              <svg viewBox="0 0 100 120" width="50" height="60">
-                <path d="M 50 10 C 20 10 10 50 10 75 C 10 100 35 115 50 115 C 65 115 90 100 90 75 C 90 50 80 10 50 10 Z" fill="#ff7675" stroke="#2d3436" strokeWidth="5.5" strokeLinejoin="round" />
-                <path d="M 50 10 L 50 115" stroke="#2d3436" strokeWidth="2" />
-                <path d="M 10 75 L 90 75" stroke="#2d3436" strokeWidth="2" />
-                <path d="M 20 30 L 80 100" stroke="#2d3436" strokeWidth="2" />
-                <path d="M 80 30 L 20 100" stroke="#2d3436" strokeWidth="2" />
-                <path d="M 35 45 Q 50 55 65 45" fill="none" stroke="#2d3436" strokeWidth="2" />
-                <path d="M 25 60 Q 50 75 75 60" fill="none" stroke="#2d3436" strokeWidth="2" />
-                <path d="M 20 75 Q 50 95 80 75" fill="none" stroke="#2d3436" strokeWidth="2" />
-                <path d="M 18 55 C 25 50 38 50 45 68 C 35 75 25 72 18 55 Z" fill="#ffffff" stroke="#2d3436" strokeWidth="5.5" strokeLinejoin="round" />
-                <path d="M 82 55 C 75 50 62 50 55 68 C 65 75 75 72 82 55 Z" fill="#ffffff" stroke="#2d3436" strokeWidth="5.5" strokeLinejoin="round" />
-              </svg>
-            </div>
           </div>
         </div>
 
-        <div className="cover-welcome">Walimatul Khitan</div>
+        <div style={{ display: 'flex', justifyContent: 'center', gap: '8px', alignItems: 'center', marginBottom: '8px' }}>
+          <span style={{ fontSize: '0.85rem', fontWeight: 800, color: 'var(--accent-gold)', background: 'var(--primary-dark)', padding: '2px 10px', borderRadius: '4px', letterSpacing: '1px' }}>NYOK KONDANGAN!</span>
+        </div>
+        <div className="cover-welcome" style={{ marginTop: '8px' }}>Walimatul Khitan</div>
         <h1 className="cover-title">
           Aydan Syahmi
           <span>Undangan Digital Khitanan</span>
         </h1>
 
-        <div className="cover-recipient-card">
-          <div className="cover-recipient-label">Kepada Yth. Bapak/Ibu/Saudara/i:</div>
-          <div className="cover-recipient-name">{guestName}</div>
+        <div className="cover-recipient-wrapper">
+          <div className="cover-recipient-card">
+            <div className="cover-recipient-label">Kepada Yth. Bapak/Ibu/Saudara/i:</div>
+            <div className="cover-recipient-name">{guestName}</div>
+          </div>
         </div>
 
         <button className="btn-primary btn-open" onClick={onOpen}>

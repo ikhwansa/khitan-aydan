@@ -1,15 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Quicksand:wght@400;500;600;700&display=swap');
 
 :root {
-  /* Design system tokens */
-  --primary-light: hsl(205, 100%, 95%);      /* Very soft pastel blue */
-  --primary-pastel: hsl(205, 90%, 90%);     /* Soft pastel blue */
-  --primary-medium: hsl(205, 75%, 70%);     /* Mid-tone pastel blue */
-  --primary-brand: #ff7675;                 /* Cheerful cartoon coral red */
-  --primary-dark: #2d3436;                  /* Solid cartoon dark gray/black */
-  --accent-gold: hsl(42, 100%, 62%);        /* Child-friendly glowing gold for stars */
-  --bg-light: hsl(210, 30%, 98%);           /* Clean light gray background */
-  --card-bg: #ffffff;                       /* Solid white for cartoon styling */
+  /* Design system tokens - Tema Full Betawi */
+  --primary-light: #FDFCF7;                 /* Warm ivory background */
+  --primary-pastel: #F5EFE4;                /* Softer warm cream */
+  --primary-medium: #C5A880;                /* Muted gold/tan */
+  --primary-brand: #2E7D32;                 /* Betawi Green */
+  --primary-brand-hover: #1B5E20;           /* Darker Green for hover */
+  --primary-dark: #2d3436;                  /* Solid dark gray/black */
+  --accent-gold: #E5A93B;                   /* Vibrant Gold */
+  --accent-orange: #F57C00;                 /* Betawi Orange */
+  --accent-red: #D32F2F;                    /* Ondel-Ondel Red */
+  --bg-light: #FAF6EE;                      /* Warm background color */
+  --card-bg: #ffffff;                       /* Solid white for cards */
   
   --font-heading: 'Outfit', sans-serif;
   --font-body: 'Quicksand', sans-serif;
@@ -200,7 +203,7 @@ h1, h2, h3, h4 {
   display: block;
   width: 70%;
   height: 6px;
-  background: #ff7675;
+  background: var(--primary-brand);
   margin: 8px auto 0 auto;
   border-radius: 3px;
   border: 2px solid #2d3436;
@@ -220,7 +223,7 @@ h1, h2, h3, h4 {
 
 /* BUTTONS */
 .btn-primary {
-  background: #ff7675;
+  background: var(--primary-brand);
   color: white;
   border: 3px solid #2d3436;
   padding: 14px 28px;
@@ -240,7 +243,7 @@ h1, h2, h3, h4 {
 
 .btn-primary:hover {
   transform: translate(2px, 2px);
-  background: #ff5252;
+  background: var(--primary-brand-hover);
   box-shadow: 2px 2px 0px #2d3436;
 }
 
@@ -354,7 +357,7 @@ h1, h2, h3, h4 {
 }
 
 .cover-welcome {
-  color: #ff7675;
+  color: var(--primary-brand);
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 2px;
@@ -375,16 +378,92 @@ h1, h2, h3, h4 {
   display: block;
   font-size: 1.2rem;
   font-weight: 700;
-  color: #74b9ff;
+  color: var(--accent-green);
   margin-top: 5px;
 }
 
+.cover-recipient-wrapper {
+  position: relative;
+  width: 100%;
+  margin-bottom: 32px;
+  z-index: 10;
+}
+
 .cover-recipient-card {
+  position: relative;
+  z-index: 10;
   background: #fff9e6;
   border: 3px dashed #2d3436;
   border-radius: var(--border-radius-md);
   padding: 20px;
-  margin-bottom: 32px;
+}
+
+.aydan-character-wrapper {
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translate(-50%, 12px);
+  width: 140px;
+  height: 140px;
+  z-index: 5;
+  pointer-events: none;
+}
+
+.aydan-character-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.character-peci {
+  position: absolute;
+  width: 60px;
+  height: 24px;
+  background: #1a1a1a;
+  border: 3px solid #2d3436;
+  border-radius: 5px 5px 2px 2px;
+  z-index: 4;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%) rotate(-1deg);
+  box-shadow: 2px 2px 0px rgba(0,0,0,0.1);
+}
+
+.character-face-container {
+  position: absolute;
+  width: 58px;
+  height: 68px;
+  border-radius: 50% 50% 45% 45%;
+  border: 3px solid #2d3436;
+  overflow: hidden;
+  background: #FCE2B6;
+  z-index: 3;
+  top: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.character-face-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 20%;
+}
+
+.character-body-svg {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+}
+
+.character-waving-arm {
+  position: absolute;
+  top: 60px;
+  right: -10px;
+  transform-origin: 10px 50px;
+  z-index: 6;
 }
 
 .cover-recipient-label {
@@ -398,7 +477,7 @@ h1, h2, h3, h4 {
 .cover-recipient-name {
   font-size: 1.3rem;
   font-weight: 800;
-  color: #ff7675;
+  color: var(--primary-brand);
 }
 
 .btn-open {
@@ -656,8 +735,8 @@ h1, h2, h3, h4 {
 }
 
 .form-control:focus {
-  border-color: #ff7675;
-  background: #fffcfc;
+  border-color: var(--primary-brand);
+  background: var(--primary-light);
 }
 
 .form-row-grid {
@@ -860,9 +939,13 @@ h1, h2, h3, h4 {
     font-size: 1.05rem;
   }
   
+  .cover-recipient-wrapper {
+    margin-bottom: 24px;
+  }
+
   .cover-recipient-card {
     padding: 16px;
-    margin-bottom: 24px;
+    margin-bottom: 0 !important;
   }
 
   .cover-recipient-name {
@@ -932,7 +1015,7 @@ h1, h2, h3, h4 {
   }
 }
 
-/* Static Cartoon Background Container */
+/* Static Cultural Background Container */
 .static-bg-container {
   position: fixed;
   top: 0;
@@ -950,67 +1033,252 @@ h1, h2, h3, h4 {
 }
 
 /* Positioning decorators */
-.dec-web-top-left {
+.dec-gorga-top-left {
   top: 0;
   left: 0;
 }
 
-.dec-cloud-top-right {
-  top: 15%;
-  right: 6%;
-}
-
-.dec-spider-left {
-  top: 0;
-  left: 12%;
-}
-
-.dec-spidey-right {
-  top: 48%;
+.dec-gigibalang-top-right {
+  top: 8%;
   right: 5%;
-  transform: rotate(-10deg);
+}
+
+.dec-bolon-left {
+  top: 4%;
+  left: 10%;
+}
+
+.dec-ondel-right {
+  top: 45%;
+  right: 5%;
 }
 
 /* Hide or adjust on small mobile screens to keep them subtle and not clutter the content width */
 @media (max-width: 768px) {
   .bg-decorator {
-    opacity: 0.12;
+    opacity: 0.15;
   }
-  .dec-web-top-left { left: -20px; top: -20px; opacity: 0.15; }
-  .dec-cloud-top-right { right: -20px; top: 25%; }
-  .dec-spider-left { left: 15px; top: -10px; opacity: 0.15; }
-  .dec-spidey-right { right: -15px; top: 52%; opacity: 0.15; }
+  .dec-gorga-top-left { left: -15px; top: -15px; }
+  .dec-gigibalang-top-right { right: -15px; top: 12%; }
+  .dec-bolon-left { left: 10px; top: 2%; }
+  .dec-ondel-right { right: -10px; top: 48%; }
 }
 
-/* Custom CSS animations for background decorators */
-@keyframes spiderClimb {
-  0% { transform: translateY(0); }
-  50% { transform: translateY(25px); }
-  100% { transform: translateY(0); }
+/* Custom CSS animations for cultural background decorators */
+@keyframes bolonFloat {
+  0% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-15px) rotate(2deg); }
+  100% { transform: translateY(0) rotate(0deg); }
 }
 
-@keyframes spideyFloat {
-  0% { transform: translateY(0) rotate(-10deg); }
-  50% { transform: translateY(-12px) rotate(-6deg); }
-  100% { transform: translateY(0) rotate(-10deg); }
+@keyframes ondelFloat {
+  0% { transform: translateY(0) scale(1) rotate(0deg); }
+  50% { transform: translateY(-10px) scale(1.02) rotate(-2deg); }
+  100% { transform: translateY(0) scale(1) rotate(0deg); }
 }
 
-@keyframes cloudFloat {
-  0% { transform: translate(0, 0); }
-  50% { transform: translate(-8px, -5px); }
-  100% { transform: translate(0, 0); }
+@keyframes kembangKelapaSway {
+  0% { transform: rotate(0deg) translate(0, 0); }
+  50% { transform: rotate(4deg) translate(5px, -5px); }
+  100% { transform: rotate(0deg) translate(0, 0); }
 }
 
-.dec-spider-left {
-  animation: spiderClimb 5s ease-in-out infinite;
+.dec-bolon-left {
+  animation: bolonFloat 7s ease-in-out infinite;
 }
 
-.dec-spidey-right {
-  animation: spideyFloat 6s ease-in-out infinite;
+.dec-ondel-right {
+  animation: ondelFloat 6s ease-in-out infinite;
 }
 
-.dec-cloud-top-right {
-  animation: cloudFloat 8s ease-in-out infinite;
+.dec-gigibalang-top-right {
+  animation: kembangKelapaSway 8s ease-in-out infinite;
+}
+
+/* BANK CARD STYLE */
+.bank-card {
+  background: linear-gradient(135deg, #2E7D32 0%, #1B5E20 100%);
+  border: 3px solid #2d3436;
+  border-radius: 20px;
+  padding: 24px;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: var(--shadow-soft);
+  color: white;
+  text-align: left;
+  position: relative;
+  overflow: hidden;
+  transition: var(--transition-bouncy);
+  margin: 10px auto 20px auto;
+}
+
+.bank-card:hover {
+  transform: translate(-3px, -3px) rotate(1deg);
+  box-shadow: 9px 9px 0px #2d3436;
+}
+
+/* Add a subtle Batik Betawi Gigi Balang / Pucuk Rebung pattern in the background of the bank card */
+.bank-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    linear-gradient(45deg, rgba(229, 169, 59, 0.08) 25%, transparent 25%),
+    linear-gradient(-45deg, rgba(229, 169, 59, 0.08) 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, rgba(229, 169, 59, 0.08) 75%),
+    linear-gradient(-45deg, transparent 75%, rgba(229, 169, 59, 0.08) 75%),
+    repeating-linear-gradient(90deg, transparent, transparent 20px, rgba(255, 255, 255, 0.04) 20px, rgba(255, 255, 255, 0.04) 40px);
+  background-size: 20px 20px, 20px 20px, 20px 20px, 20px 20px, 40px 40px;
+  background-position: 0 0, 0 10px, 10px -10px, -10px 0px, 0 0;
+  opacity: 0.9;
+  pointer-events: none;
+}
+
+.bank-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.bank-brand {
+  font-family: var(--font-heading);
+  font-size: 1.8rem;
+  font-weight: 900;
+  letter-spacing: 1.5px;
+  text-shadow: 2px 2px 0px #2d3436;
+}
+
+.bank-card-number {
+  font-family: var(--font-heading);
+  font-size: 1.6rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 24px;
+  text-shadow: 2px 2px 0px #2d3436;
+}
+
+.bank-card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.bank-card-holder {
+  display: flex;
+  flex-direction: column;
+}
+
+.holder-label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  opacity: 0.8;
+  margin-bottom: 4px;
+}
+
+.holder-name {
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-shadow: 1.5px 1.5px 0px #2d3436;
+}
+
+.btn-copy-bank {
+  background: var(--accent-gold);
+  color: #2d3436;
+  border: 2px solid #2d3436;
+  padding: 8px 14px;
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  font-weight: 800;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: var(--transition-bouncy);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  box-shadow: 3px 3px 0px #2d3436;
+}
+
+.btn-copy-bank:hover {
+  transform: translate(1px, 1px);
+  background: #ffd32a;
+  box-shadow: 2px 2px 0px #2d3436;
+}
+
+.btn-copy-bank:active {
+  transform: translate(3px, 3px);
+  box-shadow: 0px 0px 0px #2d3436;
+}
+
+@media (max-width: 480px) {
+  .bank-card {
+    padding: 16px;
+  }
+  .bank-brand {
+    font-size: 1.5rem;
+  }
+  .bank-card-number {
+    font-size: 1.3rem;
+    letter-spacing: 1.5px;
+    margin-bottom: 16px;
+  }
+  .holder-name {
+    font-size: 0.95rem;
+  }
+  .btn-copy-bank {
+    padding: 6px 12px;
+    font-size: 0.75rem;
+  }
+}
+
+/* Full Betawi Theme Background Decorators */
+.dec-monas-left {
+  top: 10%;
+  left: 4%;
+  animation: bolonFloat 9s ease-in-out infinite;
+}
+
+.dec-kebaya-right {
+  top: 65%;
+  right: 4%;
+  animation: ondelFloat 10s ease-in-out infinite;
+}
+
+.dec-ondel-male-right {
+  top: 35%;
+  right: 5%;
+  animation: ondelFloat 7s ease-in-out infinite;
+}
+
+.dec-ondel-female-left {
+  top: 42%;
+  left: 4%;
+  animation: bolonFloat 8s ease-in-out infinite;
+}
+
+.dec-kembang-kelapa-1 {
+  top: 22%;
+  right: 12%;
+  animation: kembangKelapaSway 5s ease-in-out infinite;
+}
+
+.dec-kembang-kelapa-2 {
+  top: 75%;
+  left: 10%;
+  animation: kembangKelapaSway 6s ease-in-out infinite;
+}
+
+@media (max-width: 768px) {
+  .dec-monas-left { left: 5px; top: 12%; }
+  .dec-kebaya-right { right: 5px; top: 70%; }
+  .dec-ondel-male-right { right: 5px; top: 38%; }
+  .dec-ondel-female-left { left: 5px; top: 45%; }
 }
 
 
