@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Calendar, Clock, MapPin, Music, Send, Star, Copy, Check } from 'lucide-react';
+import { Calendar, Clock, MapPin, Send, Star, Copy, Check } from 'lucide-react';
 import aydanPhoto from '../assets/aydan_photo.jpeg';
 import { db, isFirebaseEnabled } from '../firebase';
 import { collection, addDoc, query, orderBy, onSnapshot } from 'firebase/firestore';
@@ -390,17 +390,7 @@ export default function MainContent({ isOpened }) {
             </a>
           </div>
 
-          {/* Card 3: Hiburan */}
-          <div className="glass-card event-card">
-            <div className="card-icon-circle">
-              <Music size={28} />
-            </div>
-            <h3>Hiburan</h3>
-            <p className="highlight-text">Organ Tunggal</p>
-            <p style={{ fontSize: '0.9rem', opacity: 0.8, marginTop: '4px' }}>
-              Senandung ceria memeriahkan hari istimewa
-            </p>
-          </div>
+
         </div>
       </section>
 
