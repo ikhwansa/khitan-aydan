@@ -380,7 +380,7 @@ export default function MainContent({ isOpened }) {
 
             {/* Contrast Location Button */}
             <a 
-              href="https://maps.google.com/?q=Perum+Green+Garden+Jakarta+Utara" 
+              href="https://www.google.com/maps/dir/-6.1264425,106.7864259/-6.151305,106.951073/@-6.2474801,106.8087673,12.28z?entry=ttu&g_ep=EgoyMDI2MDYxMy4wIKXMDSoASAFQAw%3D%3D" 
               target="_blank" 
               rel="noopener noreferrer" 
               className="btn-contrast"
